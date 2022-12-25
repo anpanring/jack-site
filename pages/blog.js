@@ -1,5 +1,6 @@
 import Date from '../components/date';
 import { getSortedPostsData } from '../lib/posts';
+import Head from 'next/head';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import Layout from '../components/layout';
@@ -7,6 +8,9 @@ import Layout from '../components/layout';
 export default function Blog({ allPostsData }) {
     return (
         <Layout>
+            <Head>
+                <title>Blog</title>
+            </Head>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
                 <ul className={utilStyles.list}>
