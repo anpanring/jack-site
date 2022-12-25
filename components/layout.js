@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Navbar from './navbar';
 
 const name = 'Jack Dempsey';
 export const siteTitle = 'Anpankid';
@@ -30,13 +31,13 @@ export default function Layout({ children, home }) {
                     <>
                         <Image
                             priority
-                            src="/images/profile.jpeg"
+                            src="/images/spinnylogo.gif"
                             className={utilStyles.borderCircle}
-                            height={144}
-                            width={144}
+                            height={70}
+                            width={70}
                             alt=""
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                        <h1 className={utilStyles.headingLg}>{name}</h1>
                     </>
                 ) : (
                     <>
@@ -50,14 +51,10 @@ export default function Layout({ children, home }) {
                                 alt=""
                             />
                         </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/" className={utilStyles.colorInherit}>
-                                {name}
-                            </Link>
-                        </h2>
                     </>
                 )}
             </header>
+            <Navbar />
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
