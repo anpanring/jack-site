@@ -27,6 +27,7 @@ export default function Layout({ children, home }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className={styles.header}>
+                <Image src='/images/leftTriangle2.png' height={35} width={125} />
                 {home ? (
                     <>
                         <Image
@@ -52,9 +53,23 @@ export default function Layout({ children, home }) {
                         </Link>
                     </>
                 )}
+                <Image src='/images/rightTriangle2.png' height={35} width={125} />
             </header>
             <Navbar />
             <main>{children}</main>
-        </div>
+        </div >
     );
 }
+
+// function draw() {
+//     const canvas = document.getElementById("leftCanvas");
+//     if (canvas.getContext) {
+//         const ctx = canvas.getContext("2d");
+
+//         ctx.fillStyle = "rgb(200, 0, 0)";
+//         ctx.fillRect(10, 10, 50, 50);
+
+//         ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+//         ctx.fillRect(30, 30, 50, 50);
+//     }
+// }
