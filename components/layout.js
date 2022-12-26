@@ -32,23 +32,22 @@ export default function Layout({ children, home }) {
                         <Image
                             priority
                             src="/images/spinnylogo.gif"
-                            className={utilStyles.borderCircle}
+                            className={utilStyles.logo}
                             height={70}
                             width={70}
                             alt=""
                         />
-                        <h1 className={utilStyles.headingLg}>{name}</h1>
                     </>
                 ) : (
                     <>
                         <Link href="/">
                             <Image
                                 priority
-                                src="/images/profile.jpeg"
-                                className={utilStyles.borderCircle}
-                                height={108}
-                                width={108}
-                                alt=""
+                                src="/images/spinnylogo.gif"
+                                className={utilStyles.logo}
+                                height={70}
+                                width={70}
+                                alt="Spinning logo"
                             />
                         </Link>
                     </>
@@ -56,11 +55,6 @@ export default function Layout({ children, home }) {
             </header>
             <Navbar />
             <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">← Back to home</Link>
-                </div>
-            )}
         </div>
     );
 }
