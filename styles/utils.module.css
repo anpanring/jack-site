@@ -40,9 +40,15 @@
 }
 
 .listItem {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
+    font-size: 12px;
 }
 
 .lightText {
     color: #666;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 12px;
 }
