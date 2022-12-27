@@ -10,7 +10,8 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p>My name is Jack Dempsey.</p>
+        <h2 className={utilStyles.headingLg}>Hi!</h2>
+        <p>Welcome to my website. This was made for fun.</p>
       </section>
     </Layout>
   );
