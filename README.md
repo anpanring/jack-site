@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Personal website for Jack Dempsey built with Next.js.
