@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid black 1px;
+    border: dotted black 1px;
 }
 
 .navItem {

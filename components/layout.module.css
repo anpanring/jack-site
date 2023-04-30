@@ -1,17 +1,12 @@
 .container {
-    max-width: 36rem;
-    padding: 0 1rem;
-    margin: 2rem auto 6rem;
+    padding: 1rem;
 }
 
 .header {
     display: flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    ;
+    justify-content: left;
 }
 
 .backToHome {

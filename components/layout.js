@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Navbar from './navbar';
 
 const name = 'Jack Dempsey';
-export const siteTitle = 'Anpankid';
+export const siteTitle = 'Jack Dempsey';
 
 export default function Layout({ children, home }) {
     return (
@@ -27,35 +27,41 @@ export default function Layout({ children, home }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className={styles.header}>
-                <Image src='/images/leftTriangle2.png' height={35} width={125} />
                 {home ? (
                     <>
                         <Image
                             priority
                             src="/images/spinnylogo.gif"
-                            className={utilStyles.logo}
-                            height={70}
-                            width={70}
+                            className={utilStyles.spinLogo}
+                            height={40}
+                            width={40}
                             alt=""
                         />
                     </>
                 ) : (
                     <>
-                        <Link href="/">
+                        <Link href="/" alt="home">
+                            {/* <Image
+                                priority
+                                src="/images/logo.png"
+                                className={utilStyles.staticLogo}
+                                height={30}
+                                width={30}
+                                alt=""
+                            /> */}
                             <Image
                                 priority
                                 src="/images/spinnylogo.gif"
-                                className={utilStyles.logo}
-                                height={70}
-                                width={70}
-                                alt="Spinning logo"
+                                className={utilStyles.spinLogo}
+                                height={40}
+                                width={40}
+                                alt=""
                             />
                         </Link>
                     </>
                 )}
-                <Image src='/images/rightTriangle2.png' height={35} width={125} />
+                <Navbar />
             </header>
-            <Navbar />
             <main>{children}</main>
         </div >
     );
