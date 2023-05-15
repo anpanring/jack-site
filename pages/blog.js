@@ -13,17 +13,17 @@ export default function Blog({ allPostsData }) {
             </Head>
             <section className={`${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
+                <div className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li key={id}>
-                            <Link href={`/posts/${id}`} className={utilStyles.listItem}>{title}</Link>
+                        <div key={id} className={utilStyles.listItem}>
+                            <Link href={`/posts/${id}`} className={utilStyles.postTitle}>{title}</Link>
                             <br />
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
                             </small>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </section>
         </Layout>
     )

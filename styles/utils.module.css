@@ -25,6 +25,11 @@
     line-height: 1.5;
 }
 
+.headingSm {
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
 .colorInherit {
     color: inherit;
 }
@@ -34,18 +39,19 @@
 }
 
 .list {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     padding: 0;
     margin: 0;
 }
 
-.listItem {
-    margin: 0 0 1rem;
-    font-size: 12px;
+.postTitle {
+    font-size: 1.2rem;
     color: green;
 }
 
-.listItem:hover {
+.postTitle:hover {
     background-color: green;
     color: white;
 }
@@ -64,5 +70,5 @@
 }
 
 .staticLogo:hover {
-    opacity:0;
+    opacity: 0;
 }
