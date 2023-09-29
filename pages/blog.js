@@ -2,7 +2,7 @@ import Date from '../components/date';
 import { getSortedPostsData } from '../lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.scss';
 import Layout from '../components/layout';
 
 export default function Blog({ allPostsData }) {
@@ -11,19 +11,19 @@ export default function Blog({ allPostsData }) {
             <Head>
                 <title>Blog</title>
             </Head>
-            <section className={`${utilStyles.padding1px}`}>
+            <section className={utilStyles.padding1px}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
+                <div className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>{title}</Link>
+                        <div key={id} className={utilStyles.listItem}>
+                            <Link href={`/posts/${id}`} className={utilStyles.postTitle}>{title}</Link>
                             <br />
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
                             </small>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </section>
         </Layout>
     )
