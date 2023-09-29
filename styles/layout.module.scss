@@ -1,0 +1,24 @@
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.toggleModeButton {
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    border: solid 2px green;
+    cursor: pointer;
+    color: var(--main-text-color);
+    margin: 1em;
+}

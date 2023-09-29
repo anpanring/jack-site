@@ -1,8 +1,8 @@
 import Date from '../components/date';
 import Head from 'next/head';
 import Link from 'next/link';
-// import utilStyles from '../styles/utils.module.css';
-import styles from '../styles/about.module.css';
+import utilStyles from '../styles/utils.module.scss';
+import styles from '../styles/about.module.scss';
 import Layout from '../components/layout';
 
 export default function About() {
@@ -11,8 +11,8 @@ export default function About() {
             <Head>
                 <title>About</title>
             </Head>
-            <section className={`${styles.padding1px}`}>
-                <h2 className={styles.headingLg}>About</h2>
+            <section className={utilStyles.padding1px}>
+                <h2 className={utilStyles.headingLg}>About</h2>
                 <p>Jack Dempsey is currently a junior at NYU studying computer science and psychology. He is interested in helping people through the intersection of the internet, art, music, and conversation.</p>
             </section>
             <section className={`${styles.headingMd} ${styles.padding1px}`}>

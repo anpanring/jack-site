@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+}
+
+.navItem {
+    display: flex;
+    color: var(--main-text-color);
+    font-size: 1em;
+}
+
+.navItem:hover,
+.navItem:active {
+    opacity: 50%;
+}

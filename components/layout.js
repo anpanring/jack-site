@@ -1,69 +1,34 @@
+import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
+import styles from '../styles/layout.module.scss';
 import Navbar from './navbar';
+import { changeMode } from '../lib/toggleMode';
 
 const name = 'Jack Dempsey';
 export const siteTitle = 'Jack Dempsey';
 
 export default function Layout({ children, home }) {
+    const [modeText, changeModeText] = useState('Dark');
+
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <meta
-                    name="description"
-                    content="Jack Dempsey personal website"
-                />
-                <meta
-                    property="og:image"
-                    onContextMenu={`https://og-image.vercel.app/${encodeURI(
-                        siteTitle,
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                />
+                <meta name="description" content="Jack Dempsey's personal website." />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <header className={styles.header}>
-                {home ? (
-                    <>
-                        <Image
-                            priority
-                            src="/images/spinnylogo.gif"
-                            className={utilStyles.spinLogo}
-                            height={40}
-                            width={40}
-                            alt=""
-                        />
-                    </>
-                ) : (
-                    <>
-                        <Link href="/" alt="home">
-                            {/* <Image
-                                priority
-                                src="/images/logo.png"
-                                className={utilStyles.staticLogo}
-                                height={30}
-                                width={30}
-                                alt=""
-                            /> */}
-                            <Image
-                                priority
-                                src="/images/spinnylogo.gif"
-                                className={utilStyles.spinLogo}
-                                height={40}
-                                width={40}
-                                alt=""
-                            />
-                        </Link>
-                    </>
-                )}
-                <Navbar />
-            </header>
-            <main>{children}</main>
-        </div >
+            <Navbar />
+            <main className={styles.container}>{children}</main>
+            <footer className={styles.footer}>
+                <button onClick={() => {
+                    changeMode();
+                    modeText === 'Light' ? changeModeText('Dark') : changeModeText('Light');
+                }} className={styles.toggleModeButton}>{modeText} mode</button>
+            </footer >
+        </>
     );
 }
 
