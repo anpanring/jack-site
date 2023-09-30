@@ -5,6 +5,7 @@ import Image from 'next/image';
 import utilStyles from '../styles/utils.module.scss';
 import styles from '../styles/about.module.scss';
 import Layout from '../components/layout';
+import babyPic from '../public/images/baby.jpeg';
 
 export default function About() {
     return (
@@ -26,7 +27,7 @@ export default function About() {
                         <Link className={styles.socialLink} href='https://open.spotify.com/user/anpanring?si=f801ccaca5b94119' target='_blank'>Spotify</Link>
                     </div>
                 </div>
-                <Image src="/../public/images/baby.JPG" className={styles.baby} width={160} height={120} alt="picture of young Jack"></Image>
+                <Image src={babyPic} className={styles.baby} width={160} height={120} alt="picture of young Jack" placeholder="blur"></Image>
             </section>
             <p>You can also find me at the alias <strong>anpankid</strong> on various sites.</p>
         </Layout >
