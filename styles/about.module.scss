@@ -2,3 +2,23 @@
     display: flex;
     flex-direction: column;
 }
+
+.socialLink {
+    color: var(--main-link-color);
+    text-decoration: none;
+}
+
+.socialLink:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.baby {
+    margin: 2em;
+}

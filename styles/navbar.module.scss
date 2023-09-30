@@ -1,17 +1,27 @@
 .navbar {
+    position: fixed;
+    background-color: var(--main-bg-color);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.linkGroup {
     display: flex;
     justify-content: space-between;
-    gap: 1em;
-    padding: 1em;
+    padding: var(--outer-space);
 }
 
 .navItem {
     display: flex;
-    color: var(--main-text-color);
+    color: var(--main-link-color);
     font-size: 1em;
+    text-decoration: none;
 }
 
 .navItem:hover,
-.navItem:active {
-    opacity: 50%;
+.navItem:active,
+.selected {
+    background-color: var(--main-link-color);
+    color: white;
 }

@@ -6,12 +6,12 @@ import utilStyles from '../../styles/utils.module.scss';
 
 export default function Post({ postData }) {
     return (
-        <Layout>
+        <Layout page="Blog">
             <Head>
                 <title>{postData.title}</title>
             </Head>
             <article>
-                <h1 className={utilStyles.headingLg}>{postData.title}</h1>
+                <h2 className={utilStyles.headingLg}>{postData.title}</h2>
                 <div className={utilStyles.lightText}>
                     <Date dateString={postData.date} />
                 </div>

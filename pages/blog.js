@@ -7,12 +7,12 @@ import Layout from '../components/layout';
 
 export default function Blog({ allPostsData }) {
     return (
-        <Layout>
+        <Layout page="Blog">
             <Head>
                 <title>Blog</title>
             </Head>
             <section className={utilStyles.padding1px}>
-                <h2 className={utilStyles.headingLg}>Blog</h2>
+                <h2 className={utilStyles.headingLg}>Random Writings</h2>
                 <div className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
                         <div key={id} className={utilStyles.listItem}>
