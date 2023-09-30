@@ -8,7 +8,7 @@ const name = 'Jack Dempsey';
 export const siteTitle = 'Jack Dempsey';
 
 export default function Layout({ children, home }) {
-    const [modeText, changeModeText] = useState('Dark');
+    const [color, setColor] = useState('Dark');
 
     return (
         <>
@@ -23,10 +23,8 @@ export default function Layout({ children, home }) {
             <Navbar />
             <main className={styles.container}>{children}</main>
             <footer className={styles.footer}>
-                <button onClick={() => {
-                    changeMode();
-                    modeText === 'Light' ? changeModeText('Dark') : changeModeText('Light');
-                }} className={styles.toggleModeButton}>{modeText} mode</button>
+                <button onClick={() => setColor(changeMode() === 'dark' ? 'Light' : 'Dark')}
+                    className={styles.toggleModeButton}>{color} mode</button>
             </footer >
         </>
     );

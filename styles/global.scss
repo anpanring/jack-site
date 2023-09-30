@@ -1,14 +1,21 @@
-html {
+:root {
+    --main-bg-color: white;
+    --main-text-color: black;
+    --outer-space: 1.5em;
+}
+
+html,
+body {
     padding: 0;
     margin: 0;
     font-family: "Hiragino Sans", "ヒラギノ角ゴ", sans-serif;
-    background: var(--main-bg-color);
+    background-color: var(--main-bg-color);
     color: var(--main-text-color);
+}
 
-    :root {
-        --main-bg-color: white;
-        --main-text-color: black;
-    }
+html[data-theme='light'] {
+    --main-bg-color: white;
+    --main-text-color: black;
 }
 
 html[data-theme='dark'] {
