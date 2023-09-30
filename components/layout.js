@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/layout.module.scss';
 import Navbar from './navbar';
@@ -7,8 +7,9 @@ import { changeMode } from '../lib/toggleMode';
 const name = 'Jack Dempsey';
 export const siteTitle = 'Jack Dempsey';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, page }) {
     const [color, setColor] = useState('Dark');
+    // const [currentPage, setCurrentPage] = useState('Home');
 
     return (
         <>
@@ -20,7 +21,7 @@ export default function Layout({ children, home }) {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <Navbar />
+            <Navbar page={page} />
             <main className={styles.container}>{children}</main>
             <footer className={styles.footer}>
                 <button onClick={() => setColor(changeMode() === 'dark' ? 'Light' : 'Dark')}

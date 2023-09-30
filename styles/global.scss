@@ -2,6 +2,7 @@
     --main-bg-color: white;
     --main-text-color: black;
     --outer-space: 1.5em;
+    --main-link-color: green;
 }
 
 html,
@@ -21,15 +22,6 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --main-bg-color: black;
     --main-text-color: white;
-}
-
-a {
-    color: #0070f3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 p {
